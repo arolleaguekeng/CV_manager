@@ -1,7 +1,6 @@
-CREATE TABLE salle_de_cours
-(
-    id INT primary key not null,
-    max_nombre_etudiant INT,
-    min_nombre_etudiant INT,
-    salle_de_classe INT
+create table salle_de_cours(
+    id_salle_cours  int(10) primary key,
+    id_salle_normale int(10),
+    id_amphi int(10),
+    id_labo int(10)
 );
