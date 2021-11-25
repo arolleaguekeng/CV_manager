@@ -133,3 +133,41 @@ CREATE TABLE villes
     id_ville INT PRIMARY KEY NOT NULL,
     nom_ville VARCHAR (255)
 );
+
+-- creation de la table Amphi 
+create table amphi(
+    salle_de_coursid_salle_cours int(10)
+);
+
+-- creation de la table classe academique 
+create table classe_academique(
+    id_classe int(30) primary key,
+    nom_classe varchar(255),
+    id_niveau int(10),
+    id_Specialie  int(10),
+    Specialiteid_specialite int(30),
+    coursFiliereid_filiere  int(30),
+    coursNIVEAU_acadmiqueid_niveau  int(30),
+    coursid_cours  int(10)
+);
+
+-- cration de la tabble periode academique
+create table periode_academique(
+    etendu_formation varchar(255) primary key,
+    id_niveau int(30),
+    id_filiere  int(30),
+    classe_acaid_classe int(30)
+);
+
+-- cration de la table promotion
+create table promotion(
+    classe_acaid_classe  int(30)
+);
+
+-- creation  de la table salle de cour
+create table salle_de_cours(
+    id_salle_cours  int(10) primary key,
+    id_salle_normale int(10),
+    id_amphi int(10),
+    id_labo int(10)
+);
