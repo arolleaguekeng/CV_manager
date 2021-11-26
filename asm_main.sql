@@ -184,3 +184,44 @@ create table salle_de_cours(
     id_amphi int(10),
     id_labo int(10)
 );
+
+/*creer la table personne*/
+create table person(
+id_person int  primary key,
+name_person varchar(30),
+id_nationality varchar(30),
+departmentid_depertment int
+);
+
+/*creer la table propriete*/
+create table proprietary(
+personid_person int  primary key,
+);
+
+/*creer la table pays*/
+create table country(
+id_nationality int primary key,
+name_nationality varchar(30),
+capital varchar(30),
+id_person int ,
+structureid_country int
+);
+
+/*creer la table sous-ecole*/
+create table sub_school(
+id_sousecole int primary key,
+name_sousecole varchar(30),
+id_structure int ,
+structureid_structure int
+);
+
+/*creer la table structure*/
+create table structure(
+id_structure int primary key,
+name_structyre varchar(30),
+id_nationalite varchar(30),
+id_diploma int ,
+structureid_structure int
+structureid_structure2 int
+personid_person int
+);
