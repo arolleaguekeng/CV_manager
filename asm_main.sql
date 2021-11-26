@@ -70,7 +70,10 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 --
 
 @C:/asm/asm_cre
-// crea  de la table bloc
+
+--
+-- création de la table bloc
+--
 CREATE TABLE blocs
 (
     id_bloc INT PRIMARY KEY NOT NULL,
@@ -79,7 +82,9 @@ CREATE TABLE blocs
     salle_de_classe_classeid_classe INT
 );
 
-//creation de la table campus
+--
+-- création de la table campus
+--
 CREATE TABLE blocs
 (
     id_bloc INT PRIMARY KEY NOT NULL,
@@ -89,7 +94,9 @@ CREATE TABLE blocs
 
 );
 
-//creation de la table diplome
+--
+-- création de la table diplome
+--
 
 CREATE TABLE diplomes
 (
@@ -106,7 +113,9 @@ CREATE TABLE diplomes
     id_type_de_diplome INT
 );
 
-//creation de la table niveau_accademique
+--
+-- création de la table niveau_accademique
+--
 
 CREATE TABLE niveau_academique
 (
@@ -118,7 +127,9 @@ CREATE TABLE niveau_academique
     coursid_cours INT
 );
 
-//creation de la table position
+--
+-- création de la table position
+--
 
 CREATE TABLE position
 (
@@ -126,7 +137,9 @@ CREATE TABLE position
     nom_position VARCHAR (255)
 );
 
-//creation de la table ville
+--
+-- création de la table ville
+--
 
 CREATE TABLE villes
 (
