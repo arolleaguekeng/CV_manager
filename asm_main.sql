@@ -186,6 +186,7 @@ create table salle_de_cours(
 );
 
 /*creer la table personne*/
+
 create table person(
 id_person int  primary key,
 name_person varchar(30),
@@ -194,11 +195,13 @@ departmentid_depertment int
 );
 
 /*creer la table propriete*/
+
 create table proprietary(
 personid_person int  primary key,
 );
 
 /*creer la table pays*/
+
 create table country(
 id_nationality int primary key,
 name_nationality varchar(30),
@@ -208,6 +211,7 @@ structureid_country int
 );
 
 /*creer la table sous-ecole*/
+
 create table sub_school(
 id_sousecole int primary key,
 name_sousecole varchar(30),
@@ -216,6 +220,7 @@ structureid_structure int
 );
 
 /*creer la table structure*/
+
 create table structure(
 id_structure int primary key,
 name_structyre varchar(30),
