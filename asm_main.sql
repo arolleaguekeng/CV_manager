@@ -185,6 +185,8 @@ create table salle_de_cours(
     id_labo int(10)
 );
 
+/*fait par NOKIZE MAXIME   */
+
 /*creer la table personne*/
 
 create table person(
@@ -213,8 +215,8 @@ structureid_country int
 /*creer la table sous-ecole*/
 
 create table sub_school(
-id_sousecole int primary key,
-name_sousecole varchar(30),
+id_sub_school int primary key,
+name_sub_school varchar(30 ),
 id_structure int ,
 structureid_structure int
 );
@@ -223,7 +225,7 @@ structureid_structure int
 
 create table structure(
 id_structure int primary key,
-name_structyre varchar(30),
+name_structure varchar(30),
 id_nationalite varchar(30),
 id_diploma int ,
 structureid_structure int
