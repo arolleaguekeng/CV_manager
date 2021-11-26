@@ -237,71 +237,73 @@ personid_person int
 -- creation de la table type_equipement par Guetuissie Mambou
 --
 
- CREATE TABLE type_equipement (
- id_Type_equipement int primary key,
- ceiling_lamp varchar (30),
- blackboard varchar (30),
- computer varchar (30),
- tablebanc varchar (30),
- chair varchar (30),
- duster varchar (30),
- marker varchar (30),
- text_register varchar (30),
- extension_board varchar (30),
- video_projector varchar (30),
- micro varchar (30),
- server varchar (30),
- switch varchar (30),
- router varchar (30),
- fire_extinguisher varchar (30),
- biometric_pointer varchar (30),
- ticket_office varchar (30),
- podium varchar (30),
- platform varchar (30),
- haut_parleur varchar (30),
- helmet varchar (30),
- balance varchar (30),
- hygomèter varchar (30),
- refractomèter varchar (30),
- magnetic_stirrres varchar (30),
- texture_analyszers varchar (30),
- ph_meter varchar (30),
- dosing_pump varchar (30),
- power_source varchar (30),
- generator varchar (30),
- balon_heater varchar (30),
- chlorine_measurer varchar (30),
- microscope varchar (30),
- microtomes varchar (30),
- conductimeter varchar (30),
- particle_counter varchar (30),
- thermometer varchar (30),
- viscometer varchar (30),
- transparent_lenses varchar (30),
- blouse varchar (30),
- hands_gangs varchar (30),
- batting_bat varchar (30),
- metal_rule varchar (30),
- meter_ribbon varchar (30),
- spherometer varchar (30),
- precisoin_palmer varchar (30),
- hanging_hook varchar (30),
- caliper varchar (30),
- agitator varchar (30),
- balance_professional varchar (30),
- climate_speakers varchar (30),
- laboratory_glassware_washer varchar (30),
- ice_machine varchar (30),
- autoclaves varchar (30),
- centrifuge varchar (30),
- dessicators varchar (30),
- incubator varchar (30),
- micropipette varchar (30),
- support_elavator_cross varchar (30),
- electrophorese varchar (30),
- rotary_evaporator varchar (30),
- distiller varchar (30),
- heating varchar (30),
- laboratory_baths varchar (30)
+ CREATE TABLE type_equipement ( -- type_equipement
+ id_Type_equipement int primary key, -- id_type equipement
+ ceiling_lamp varchar (30), -- podium
+ blackboard varchar (30), --tableau
+ computer varchar (30), --computer
+ tablebanc varchar (30), --table banc
+ chair varchar (30), -- chaise
+ duster varchar (30), -- chiffon
+ marker varchar (30), -- marqueur
+ text_register varchar (30), -- registre texte
+ extension_board varchar (30), -- planche à ralonge
+ video_projector varchar (30), -- vidéo projecteur
+ micro varchar (30), -- micro
+ scanner varchar (30), -- scanner
+ printer varchar (30), -- imprimante
+ server varchar (30), -- serveur
+ switch varchar (30), -- switch 
+ router varchar (30), -- routeur
+ fire_extinguisher varchar (30), -- extincteur
+ biometric_pointer varchar (30), -- pointeur biométrique
+ ticket_office varchar (30), -- guichet
+ podium varchar (30), -- podium
+ platform varchar (30), -- estrade
+ loudspeaker varchar (30), -- haut parleur
+ helmet varchar (30), -- casque
+ balance varchar (30), -- balance
+ hygometer varchar (30), -- hygomètre
+ refractometer varchar (30), -- refractomètre
+magnetic_stirrer varchar (30), -- agitateur magnétique
+ texture_analyszers varchar (30), -- analyseur de texture
+ ph_meter varchar (30), -- Ph mètres
+ dosing_pump varchar (30), -- pompes doseuses
+ power_source varchar (30), -- source d'alimentation
+ generator varchar (30), -- groupe éléctrogène
+ balon_heater varchar (30), -- chauffes ballon
+ chlorine_measurer varchar (30), -- mesureur de chlore
+ microscope varchar (30), -- microscope
+ microtomes varchar (30), -- microtome
+ conductimeter varchar (30), -- conductimètre
+ particle_counter varchar (30), -- compteurs de particule
+ thermometer varchar (30), -- thermomètre
+ viscometer varchar (30), -- viscomètre
+ transparent_lenses varchar (30), -- verres transparentes
+ apron varchar (30) --  tablier
+ hands_gangs varchar (30), --  gang à amin
+ batting_bat varchar (30), -- chapeau de laboratoire
+ metal_rule varchar (30), -- règle metallique
+ meter_ribbon varchar (30), -- mètre ruban
+ spherometer varchar (30), -- sphéromètre
+ precisoin_palmer varchar (30), -- palmer de précision
+ hanging_hook varchar (30), -- crochet de suspension
+ caliper varchar (30),  -- pied à coulisse
+ agitator varchar (30), -- agitateur
+ balance_professional varchar (30), --  balance professionnelle
+ climate_speakers varchar (30), -- enceintes climatiques
+ laboratory_glassware_washer varchar (30), -- lave verrerie de laboraoire
+ ice_machine varchar (30), -- machine à glace 
+ autoclaves varchar (30), -- autoclaves
+ centrifuge varchar (30), -- centrifugeur
+ dessicators varchar (30), -- dessicateur
+ incubator varchar (30), -- incubateur
+ micropipette varchar (30), -- micropipette
+ support_elavator_cross varchar (30), -- support élévateur à croisillon
+ electrophorese varchar (30), -- éléctrophèse
+ rotary_evaporator varchar (30), -- evaporateur rotatif
+ distiller varchar (30), -- distillateur
+ heating varchar (30), -- chauffage
+ laboratory_baths varchar (30) --  bains laboratoire
  );
  
