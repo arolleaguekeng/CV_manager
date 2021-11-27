@@ -70,3 +70,9 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 --
 
 @C:/asm/asm_cre
+
+
+--
+--insert datas on tables
+--
+@C:/asm/asm_cre
