@@ -3,45 +3,45 @@
 -- création de la table niveau_accademique by Azangue
 --
 
-CREATE TABLE niveau_academique
+CREATE TABLE academic_level
 (
-    id_niveau INT PRIMARY KEY NOT NULL,
-    nom_niveau VARCHAR (255)
+    id_level INT PRIMARY KEY NOT NULL,
+    academic_level_name VARCHAR (255)
 );
 
 --
 -- création de la table diplôme by Azangue
 --
 
-CREATE TABBLE Diplômes
+CREATE TABBLE diploma
 (
-    id_diplome INT PRIMARY KEY NOT NULL,
-    tutelle VARCHAR (255),
-    nom_diplome VARCHAR (255),
-    type_diplome VARCHAR(255),
-    qualite VARCHAR(255),
-    id_specialite INT,
-    id_niveau INT,
-    equivalance INT
+    id_diploma INT PRIMARY KEY NOT NULL,
+    tutelage VARCHAR (255),
+    diploma_name VARCHAR (255),
+    diploma_type VARCHAR(255),
+    quality VARCHAR(255),
+    id_specialty INT,
+    id_level INT,
+    equivalence INT
 );
 
 --
 -- création de la table Bloc by Azangue
 --
 
-CREATE TABBLE blocs
+CREATE TABBLE block
 (
-    id_bloc INT PRIMARY KEY NOT NULL,
-    nom_bloc VARCHAR (255)
+    id_block INT PRIMARY KEY NOT NULL,
+    block_name VARCHAR (255)
 );
 
 --
 -- création de la table localisation by Azangue
 --
 
-CREATE TABBLE localisation
+CREATE TABBLE location
 (
-    blocsid_bloc INT,
+    block_id_block INT,
     position VARCHAR (255) 
 );
 
@@ -49,11 +49,11 @@ CREATE TABBLE localisation
 -- création de la table ville by Azangue
 --
 
-CREATE TABBLE villes
+CREATE TABBLE city
 (
-    id_ville INT PRIMARY KEY NOT NULL,
-    nom_ville VARCHAR (255),
-    id_nationalite int
+    id_city INT PRIMARY KEY NOT NULL,
+    city_name VARCHAR (255),
+    id_nationality int
 );
 
 --
@@ -63,7 +63,7 @@ CREATE TABBLE villes
 CREATE TABBLE campus
 (
     id_campus INT PRIMARY KEY NOT NULL,
-    nom_campus VARCHAR (255),
+    campus_name VARCHAR (255),
     strutureit_structure INT
 );
 
