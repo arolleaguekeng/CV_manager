@@ -1,78 +1,72 @@
- --
--- création de la table bloc
+
 --
-CREATE TABLE blocs
+-- création de la table niveau_accademique by Azangue
+--
+
+CREATE TABLE niveau_academique
 (
-    id_bloc INT PRIMARY KEY NOT NULL,
-    nom_bloc VARCHAR (255),
-    salle_de_classe_blocid_bloc INT,
-    salle_de_classe_classeid_classe INT
+    id_niveau INT PRIMARY KEY NOT NULL,
+    nom_niveau VARCHAR (255)
 );
 
 --
--- création de la table campus
---
-CREATE TABLE blocs
-(
-    id_bloc INT PRIMARY KEY NOT NULL,
-    nom_bloc VARCHAR (255),
-    salle_de_classe_blocid_bloc INT,
-    salle_de_classe_classeid_classe INT
-
-);
-
---
--- création de la table diplome
+-- création de la table diplôme by Azangue
 --
 
-CREATE TABLE diplomes
+CREATE TABBLE Diplômes
 (
     id_diplome INT PRIMARY KEY NOT NULL,
     tutelle VARCHAR (255),
     nom_diplome VARCHAR (255),
     type_diplome VARCHAR(255),
     qualite VARCHAR(255),
-    equivalence VARCHAR (255),
-    #id_niveau INT,
-    #id_specialite INT,
-    specialitied_specialite INT,
-    niveau_academiqueid_niveau INT,
-    id_type_de_diplome INT
+    id_specialite INT,
+    id_niveau INT,
+    equivalance INT
 );
 
 --
--- création de la table niveau_accademique
+-- création de la table Bloc by Azangue
 --
 
-CREATE TABLE niveau_academique
+CREATE TABBLE blocs
 (
-    id_niveau INT PRIMARY KEY NOT NULL,
-    nom_niveau VARCHAR (100),
-    Ddepartementid_departement INT,
-    coursfiliereid_filiere INT,
-    coursniveau_academique_niveau INT,
-    coursid_cours INT
+    id_bloc INT PRIMARY KEY NOT NULL,
+    nom_bloc VARCHAR (255)
 );
 
 --
--- création de la table position
+-- création de la table localisation by Azangue
 --
 
-CREATE TABLE position
+CREATE TABBLE localisation
 (
-    id INT PRIMARY KEY NOT NULL,
-    nom_position VARCHAR (255)
+    blocsid_bloc INT,
+    position VARCHAR (255) 
 );
 
 --
--- création de la table ville
+-- création de la table ville by Azangue
 --
 
-CREATE TABLE villes
+CREATE TABBLE villes
 (
     id_ville INT PRIMARY KEY NOT NULL,
-    nom_ville VARCHAR (255)
+    nom_ville VARCHAR (255),
+    id_nationalite int
 );
+
+--
+-- création de la table campus by Azangue
+--
+
+CREATE TABBLE campus
+(
+    id_campus INT PRIMARY KEY NOT NULL,
+    nom_campus VARCHAR (255),
+    strutureit_structure INT
+);
+
 
 -- creation de la table Amphi 
 create table amphi(
