@@ -307,3 +307,83 @@ magnetic_stirrer varchar (30), -- agitateur magnétique
  laboratory_baths varchar (30) --  bains laboratoire
  );
  
+ --
+ -- creation de la table type_salle par YIANYI POPOURE WILLIAM STEPHANE
+ --
+ CREATE TABLE type_room(
+     laboratory_informatic varchar(30), -- salle_informatique 
+	 laboratory_science varchar(30), -- salle_de_science
+	 office varchar(30), -- bureau
+	 room_conference varchar(30), -- salle_conference
+	 room_sport varchar(30), -- salle_sport
+	 room_profesor varchar(30), -- salle_prof
+	 room_reception varchar(30), -- salle_acceuil
+	 classroom varchar(30), -- salle_classe
+	 room_server varchar(30), -- salle_serveur
+	 lab_mechanic varchar(30), --- labo_serveur
+	 room_media(30), -- salle_multimedia
+	 store varchar(30), -- magasin
+	 room_medecine varchar(30), -- laba_medecine
+	 room_shower varchar(30), -- salle_douche
+	 room_infimery varchar(30), --infimerie
+	 room_library varchar(30), --bibliotheque
+	 amphitheatre varchar(30) --amphitheare
+	 workshop_room varchar(30) --salle_atelier
+);
+
+--
+--  creation de la table departement par YIANYI POPOURE WILLIAM STEPHANE
+--
+CREATE TABLE departments(
+   id_department int primary key, -- departement_id
+   name_department char(255),  --nom_departement
+   id_subschool int, --id_sous_ecole_ecole
+   id_structure int --id_structure
+ );
+ 
+ --
+ --  creation de la table cours par YIANYI POPOURE WILLIAM STEPHANE
+ --
+ CREATE TABLE classes(
+   id_spinneret int primary key not null, -- id_filiere
+   id_classe int, -- id_cours
+   id_grade int, -- id_niveau
+ );
+ 
+ --
+ --  creation de la table filiere par YIANYI POPOURE WILLIAM STEPHANE
+ --
+ CREATE TABLE spinneret(
+   id_spinneret int primary key not null, -- id_filiere
+   name_spinneret char(255), -- nom_filiere
+   organisation_de_periode varchar(30) -- organisation_de_periode
+   id_department  int, --departement_id
+ );
+ 
+ --
+ -- creation de la table objectifs par YIANYI POPOUERE WILLIAM STEPHANE
+ --
+ CREATE TABLE objectives(
+   id_spinneret int, --id_filiere
+   id_classe int, -- id_cours
+   id_grade int -- id_niveau
+ );
+ 
+ --
+ -- creation de la table specialite par YIANYI POPOUERE WILLIAM STEPHANE
+ --
+ CREATE TABLE specialty(
+   id_speciality int primary key not null, -- id_specialite
+   name_speciality char(255), -- nom_specialie
+   id_spinneret int, -- id_filiere
+   common_core int  -- tronc_commun
+ );
+ 
+ --
+ -- creation de la table syllabus par YIANYI POPOUERE WILLIAM STEPHANE
+ --
+ CREATE TABLE syllabus(
+   id_spinneret int, -- id_filiere
+   id_classe int, -- id_cours
+   id_grade int -- id_niveau
+ );
