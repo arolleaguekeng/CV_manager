@@ -16,7 +16,7 @@ CREATE TABLE users
 
 
 --
--- create table projects
+-- create table projects by AGUEKENG
 --
 
 CREATE TABLE projects
@@ -31,7 +31,7 @@ CREATE TABLE projects
 
 
 --
--- create table medias
+-- create table medias by AGUEKENG
 --
 
 CREATE TABLE medias
@@ -45,7 +45,7 @@ CREATE TABLE medias
 
 
 --
--- create table files
+-- create table files by AGUEKENG
 --
 CREATE TABLE files
 (
@@ -90,7 +90,7 @@ CREATE TABLE hobby
 
 
 
--- create table hobby_type
+-- create table hobby_type by AGUEKENG
 CREATE TABLE hobby_type --type de passe-temps
 (
     hobby_type_id  int PRIMARY KEY,
@@ -99,7 +99,7 @@ CREATE TABLE hobby_type --type de passe-temps
 
 
 --
--- create table languages
+-- create table languages by AGUEKENG
 --
 
 CREATE TABLE languages
@@ -113,7 +113,7 @@ CREATE TABLE languages
 
 
 --
--- create table file/images
+-- create table file/images by AGUEKENG
 --
 
 CREATE TABLE images
@@ -127,7 +127,7 @@ CREATE TABLE images
 
 
 --
--- creation de la table media/videos 
+-- creation de la table media/videos  by AGUEKENG
 --
 CREATE TABLE videos(
     video_id INT PRIMARY KEY NOT NULL,
@@ -138,7 +138,7 @@ CREATE TABLE videos(
 
 
 --
--- creation de la table level of project 
+-- create table level of project  by AGUEKENG
 --
 CREATE TABLE level_project  --niveau de competence pour le projet
 (
@@ -152,7 +152,7 @@ CREATE TABLE level_project  --niveau de competence pour le projet
 
 
 --
--- cration de la tabble skills
+-- create table skills by AGUEKENG
 --
 CREATE TABLE skills      
 (                
@@ -164,7 +164,7 @@ CREATE TABLE skills
 
 
 --
--- create table file/pdf
+-- create table file/pdf by AGUEKENG
 --
 
 CREATE TABLE pdf(
@@ -173,7 +173,7 @@ CREATE TABLE pdf(
 );
 
 --
--- create table file/added date
+-- create table file/added date by AGUEKENG
 --
 
 CREATE TABLE info_add  
@@ -186,7 +186,7 @@ CREATE TABLE info_add
 
 
 --
--- create table other files/files
+-- create table other files/files by AGUEKENG
 --
 CREATE TABLE other_files
 (
@@ -199,7 +199,7 @@ CREATE TABLE other_files
 
 
 --
--- create table experience/professional experience
+-- create table experience/professional experience by AGUEKENG
 --
 
 CREATE TABLE professional_exp
@@ -212,7 +212,7 @@ CREATE TABLE professional_exp
 
 
 --
--- create table experience/community experience
+-- create table experience/community experience by AGUEKENG
 --
 
  CREATE TABLE community_exp 
@@ -225,20 +225,20 @@ CREATE TABLE professional_exp
 
 
 --
---  create table experience/other experience
+--  create table experience/other experience by AGUEKENG
 --
 CREATE TABLE other_exp(
-    other_exp int PRIMARY KEY, -- departement_id
+    other_exp int PRIMARY KEY, 
     experience_id INT NOT NULL
  );
  
 
  --
- --  create table experience/academical experience
+ --  create table experience/academical experience by AGUEKENG
  --
  CREATE TABLE academical_exp
  (
-   academical_exp INT PRIMARY KEY NOT NULL, -- id_filiere
+   academical_exp INT PRIMARY KEY NOT NULL,
     experience_id INT NOT NULL
 );
 
@@ -264,7 +264,7 @@ CREATE TABLE other_exp(
 --------------------
 --------------------
 
-----------------------------CONTRAINS OF THE TABLES
+----------------------------CONTRAINS OF THE TABLES by AGUEKENG
  
 --------------------
 --------------------
