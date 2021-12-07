@@ -76,3 +76,9 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 --insert datas on tables
 --
 --@cvm_cre
+
+
+--
+--------------Show tables
+--
+SELECT table_name FROM user_tables;
