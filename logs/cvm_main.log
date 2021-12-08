@@ -1,20 +1,38 @@
-
-User dropped.
-
-
-User created.
-
-
-User altered.
+DROP USER cvm CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'CVM' does not exist 
 
 
-User altered.
+CREATE USER cvm IDENTIFIED BY cmv
+            *
+ERROR at line 1:
+ORA-65096: invalid common user or role name 
 
 
-Grant succeeded.
+ALTER USER cvm DEFAULT TABLESPACE users
+           *
+ERROR at line 1:
+ORA-01918: user 'CVM' does not exist 
 
 
-Grant succeeded.
+ALTER USER cvm TEMPORARY TABLESPACE temp
+           *
+ERROR at line 1:
+ORA-01918: user 'CVM' does not exist 
+
+
+GRANT CREATE SESSION, CREATE VIEW, ALTER SESSION, CREATE SEQUENCE TO cvm
+                                                                     *
+ERROR at line 1:
+ORA-01917: user or role 'CVM' does not exist 
+
+
+GRANT CREATE SYNONYM, CREATE DATABASE LINK, RESOURCE , UNLIMITED TABLESPACE TO cvm
+                                                                               *
+ERROR at line 1:
+ORA-01917: user or role 'CVM' does not exist 
+
 
 Connected.
 
@@ -27,129 +45,239 @@ Session altered.
 
 Session altered.
 
+CREATE TABLE users
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+SP2-0042: unknown command ")" - rest of line ignored.
+CREATE TABLE medias
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+SP2-0042: unknown command ")" - rest of line ignored.
+CREATE TABLE experiences
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE profiles
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE hobby
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE hobby_type --type de passe-temps
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE languages
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE images
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE videos(
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE level_project  --niveau de competence pour le projet
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE skills
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE pdf(
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE other_files
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE professional_exp
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+ CREATE TABLE community_exp
+              *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CREATE TABLE other_exp(
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+ CREATE TABLE academical_exp
+              *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
 
-Table created.
 
+CONSTRAINT fk_community_exp FOREIGN KEY (experience_id) REFERENCES experiences (experience_id)
+                            *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table created.
 
+     FOREIGN KEY (experience_id) REFERENCES experiences (experience_id)
+     *
+ERROR at line 4:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table created.
 
+CONSTRAINT fk_academical_exp FOREIGN KEY (experience_id) REFERENCES experiences (experience_id)
+                             *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table created.
 
+CONSTRAINT fk_professional_exp FOREIGN KEY (experience_id) REFERENCES experiences (experience_id)
+                               *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_other_file FOREIGN KEY (file_id) REFERENCES files (file_id) 
+                             *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_info_add_file FOREIGN KEY (file_id) REFERENCES files (file_id) 
+                                *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_pdf_ofile FOREIGN KEY (file_id) REFERENCES files (file_id) 
+                            *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_skills FOREIGN KEY (skill_id) REFERENCES skills (skill_id)
+                         *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_skills_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+                              *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_level_project FOREIGN KEY (project_id) REFERENCES projects (project_id)
+                                *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_video_media FOREIGN KEY (media_id) REFERENCES medias (media_id)
+                              *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_image_media FOREIGN KEY (media_id) REFERENCES medias (media_id)
+                              *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_language_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+                                *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_type_hobby FOREIGN KEY (hobby_id) REFERENCES hobby (hobby_id)
+                             *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_hobby_media FOREIGN KEY (media_id) REFERENCES medias (media_id)
+                              *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_hobby_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+                             *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_profile_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+                               *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_exp_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+                           *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_file_media FOREIGN KEY (media_id) REFERENCES medias (media_id)
+                             *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_file_experiences FOREIGN KEY (experience_id) REFERENCES  experiences (experience_id)
+                                   *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_media_project FOREIGN KEY (project_id) REFERENCES projects (project_id)
+                                *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
 
+    CONSTRAINT fk_project_exp FOREIGN KEY (experience_id) REFERENCES experiences ( experience_id)
+                              *
+ERROR at line 3:
+ORA-02275: such a referential constraint already exists in the table 
 
-Table altered.
-
-
-Table altered.
-
-
-Table altered.
-
-
-Table altered.
 

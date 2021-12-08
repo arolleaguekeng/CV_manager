@@ -1,6 +1,6 @@
 SET ECHO OFF
 SET VERIFY OFF
-ALTER SESSION SET container = xepdb1;
+ALTER SESSION set container=xepdb1;
 PROMPT 
 PROMPT specify password for cvm as parameter 1:
 DEFINE pass     = cmv
@@ -70,6 +70,8 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 --
 
 @cvm_cre
+@cvm_popul
+
 
 SPOOL OFF
 --
