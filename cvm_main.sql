@@ -73,8 +73,19 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 
 SPOOL OFF
 --
---insert datas on tables
---
+--insert datas on tables by ntentie
+
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("001","ABA","aba123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("002","Ado","ado123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("003","Anas","anas123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("004","bom","bom123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("005","balo","balo123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("006","bakosi","bakosi123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("007","bason","baso123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("008","cadin","cadin123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("009","calvi","calvi123");
+INSERT INTO users(USER_ID,USER_NAME,USER_PASSWORD)values("010","cavou","cavou123");
+
 --@cvm_cre
 
 
