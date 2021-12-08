@@ -9,19 +9,19 @@ PROMPT specify default tablespeace for cvm as parameter 2:
 DEFINE tbs      = users
 PROMPT 
 PROMPT specify temporary tablespace for cvm as parameter 3:
-DEFINE ttbs     = temps
+DEFINE ttbs     = temp
 PROMPT 
 PROMPT specify password for SYS as parameter 4:
 DEFINE pass_sys = pass
 PROMPT 
 PROMPT specify log path as parameter 5:
-DEFINE log_path = logs
+DEFINE log_path = logs/
 PROMPT
 PROMPT specify connect string as parameter 6:
 DEFINE connect_string     = //localhost:1521/xepdb1
 PROMPT
 
-DEFINE spool_file = &log_path.hr_main.log
+DEFINE spool_file = &log_path.cvm_main.log
 SPOOL &spool_file
 
 
@@ -71,7 +71,7 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 
 @cvm_cre
 
-
+SPOOL OFF
 --
 --insert datas on tables
 --

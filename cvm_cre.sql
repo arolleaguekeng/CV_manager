@@ -49,8 +49,9 @@ CREATE TABLE medias
 --
 CREATE TABLE files
 (
-    file_id int  PRIMARY KEY NOT NULL,
-    media_id  INT  NOT NULL
+    file_id int  PRIMARY KEY NOT NULL, 
+    media_id  INT  NOT NULL,
+    experience_id INT NOT NULL
 );
 
 
@@ -64,8 +65,7 @@ CREATE TABLE files
 CREATE TABLE experiences
 (
     experience_id INT PRIMARY KEY NOT NULL,
-    user_id INT NOT NULL,
-    file_id INT NOT NULL
+    user_id INT NOT NULL
 );
 
 
@@ -343,19 +343,11 @@ ALTER TABLE level_project
 
 
 
-
-
-
-
 ----------------------------------videos contraints------------------------------------
 ALTER TABLE videos
     ADD 
     CONSTRAINT fk_video_media FOREIGN KEY (media_id) REFERENCES medias (media_id);
 ----------------------------------------------------------------------------------------------
-
-
-
-
 
 
 
@@ -368,11 +360,6 @@ ALTER TABLE images
 
 
 
-
-
-
-
-
 ----------------------------------language contraints------------------------------------
 ALTER TABLE languages
     ADD 
@@ -381,21 +368,11 @@ ALTER TABLE languages
 
 
 
-
-
-
-
-
 ----------------------------------hobby_type contraints------------------------------------
 ALTER TABLE hobby_type
     ADD 
     CONSTRAINT fk_type_hobby FOREIGN KEY (hobby_id) REFERENCES hobby (hobby_id);
 ----------------------------------------------------------------------------------------
-
-
-
-
-
 
 
 
@@ -412,10 +389,6 @@ ALTER TABLE hobby
 
 
 
-
-
-
-
 ----------------------------------profiles contraints------------------------------------
 ALTER TABLE profiles
     ADD 
@@ -424,14 +397,7 @@ ALTER TABLE profiles
 
 
 
-
-
-
 ----------------------------------experiences contraints------------------------------------
-ALTER TABLE experiences
-    ADD 
-    CONSTRAINT fk_exp_file FOREIGN KEY (file_id) REFERENCES files (file_id);
-
 ALTER TABLE experiences
     ADD
     CONSTRAINT fk_exp_user FOREIGN KEY (user_id) REFERENCES users (user_id);
@@ -447,6 +413,10 @@ ALTER TABLE experiences
 ALTER TABLE files
     ADD 
     CONSTRAINT fk_file_media FOREIGN KEY (media_id) REFERENCES medias (media_id);
+
+ALTER TABLE files
+    ADD 
+    CONSTRAINT fk_file_experiences FOREIGN KEY (experience_id) REFERENCES  experiences (experience_id);
 --------------------------------------------------------------------------------------------
 
 
@@ -471,7 +441,7 @@ ALTER TABLE medias
  ----------------------------------projects contraints------------------------------------
 ALTER TABLE projects
     ADD 
-    CONSTRAINT fk_project_exp FOREIGN KEY (experience_id) REFERENCES experiences (experience_id);
+    CONSTRAINT fk_project_exp FOREIGN KEY (experience_id) REFERENCES experiences ( experience_id);
 --------------------------------------------------------------------------------------------
 
 
