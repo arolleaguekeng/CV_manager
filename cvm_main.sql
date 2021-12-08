@@ -70,7 +70,7 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 --
 
 @cvm_cre
-@cvm_popul
+@diovani/users_popul
 
 
 SPOOL OFF
