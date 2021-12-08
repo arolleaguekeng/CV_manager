@@ -75,7 +75,7 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 
 SPOOL OFF
 --
- 
+  
 
 --@cvm_cre
 
