@@ -1,15 +1,11 @@
 
-
-
-
-
 --
 -- create table users by AGUEKENG
 --
 
 CREATE TABLE users
 (
-    user_id VARCHAR(255) PRIMARY KEY NOT NULL,
+    user_id INT PRIMARY KEY NOT NULL,
     user_name VARCHAR (255),
     user_password VARCHAR (255)
 );
@@ -26,7 +22,7 @@ CREATE TABLE users
 CREATE TABLE projects
 (
     project_id INT PRIMARY KEY NOT NULL,
-    experience_id INT NOT NULL
+    experience_id INT NOT NULL  
 );
 
 
@@ -69,7 +65,8 @@ CREATE TABLE files
 CREATE TABLE experiences
 (
     experience_id INT PRIMARY KEY NOT NULL,
-    user_id VARCHAR(255) NOT NULL
+    user_id INT NOT NULL,
+    instituled VARCHAR (255)-- by azangue
 );
 
 
@@ -81,14 +78,14 @@ CREATE TABLE experiences
 CREATE TABLE profiles
 (
     profile_id INT PRIMARY KEY NOT NULL,
-    user_id VARCHAR(255) NOT NULL
+    user_id INT NOT NULL
 );
 
 -- create table hobby
 CREATE TABLE hobby 
 (
     hobby_id  INT PRIMARY KEY NOT NULL,
-    user_id VARCHAR(255) NOT NULL,
+    user_id INT NOT NULL,
     media_id  INT  NOT NULL
 );
 
@@ -109,7 +106,7 @@ CREATE TABLE hobby_type --type de passe-temps
 CREATE TABLE languages
 (
     language_id INT PRIMARY KEY NOT NULL, --langue
-    user_id VARCHAR(255) NOT NULL
+    user_id INT NOT NULL
 );
 
 
@@ -147,7 +144,8 @@ CREATE TABLE videos(
 CREATE TABLE level_project  --niveau de competence pour le projet
 (
     level_projest_id int PRIMARY KEY NOT NULL,
-    project_id  INT  NOT NULL
+    project_id  INT  NOT NULL,
+    level_participation INT-- by azangue
 );
 
 
@@ -161,7 +159,7 @@ CREATE TABLE level_project  --niveau de competence pour le projet
 CREATE TABLE skills      
 (                
     skill_id varchar(255) PRIMARY KEY NOT NULL,
-    user_id VARCHAR(255) NOT NULL,
+    user_id INT NOT NULL,
     under_skill varchar(255) --Sous compétenses
 );
 
@@ -179,12 +177,12 @@ CREATE TABLE pdf(
 --
 -- create table file/added date by AGUEKENG
 --
-
+/*
 CREATE TABLE info_add  
 (
     info_add_id int  PRIMARY KEY,
     file_id  INT  NOT NULL
-);
+);*/
 
 
 
@@ -197,7 +195,7 @@ CREATE TABLE other_files
     other_files_id int PRIMARY KEY,
     file_id  INT  NOT NULL
 );
-    -- 
+    --
 
 
 
@@ -242,8 +240,12 @@ CREATE TABLE other_exp(
  --
  CREATE TABLE academical_exp
  (
-   academical_exp INT PRIMARY KEY NOT NULL,
-    experience_id INT NOT NULL
+   academical_exp_id INT PRIMARY KEY NOT NULL,
+    experience_id INT NOT NULL,
+    intitule varchar(255), -- by azangue
+    diplome varchar(255), -- by azangue
+    begening_date date,-- by azangue
+    end_daye date -- by azangue   
 );
 
 
