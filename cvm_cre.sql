@@ -1,11 +1,15 @@
 
+
+
+
+
 --
 -- create table users by AGUEKENG
 --
 
 CREATE TABLE users
 (
-    user_id INT PRIMARY KEY NOT NULL,
+    user_id VARCHAR(255) PRIMARY KEY NOT NULL,
     user_name VARCHAR (255),
     user_password VARCHAR (255)
 );
@@ -22,8 +26,7 @@ CREATE TABLE users
 CREATE TABLE projects
 (
     project_id INT PRIMARY KEY NOT NULL,
-    experience_id INT NOT NULL,
-   
+    experience_id INT NOT NULL
 );
 
 
@@ -53,7 +56,6 @@ CREATE TABLE files
     file_id int  PRIMARY KEY NOT NULL, 
     media_id  INT  NOT NULL,
     experience_id INT NOT NULL 
-
 );
 
 
@@ -67,7 +69,7 @@ CREATE TABLE files
 CREATE TABLE experiences
 (
     experience_id INT PRIMARY KEY NOT NULL,
-    user_id INT NOT NULL
+    user_id VARCHAR(255) NOT NULL
 );
 
 
@@ -79,14 +81,14 @@ CREATE TABLE experiences
 CREATE TABLE profiles
 (
     profile_id INT PRIMARY KEY NOT NULL,
-    user_id INT NOT NULL
+    user_id VARCHAR(255) NOT NULL
 );
 
 -- create table hobby
 CREATE TABLE hobby 
 (
     hobby_id  INT PRIMARY KEY NOT NULL,
-    user_id INT NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
     media_id  INT  NOT NULL
 );
 
@@ -107,7 +109,7 @@ CREATE TABLE hobby_type --type de passe-temps
 CREATE TABLE languages
 (
     language_id INT PRIMARY KEY NOT NULL, --langue
-    user_id INT NOT NULL
+    user_id VARCHAR(255) NOT NULL
 );
 
 
@@ -159,7 +161,7 @@ CREATE TABLE level_project  --niveau de competence pour le projet
 CREATE TABLE skills      
 (                
     skill_id varchar(255) PRIMARY KEY NOT NULL,
-    user_id INT NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
     under_skill varchar(255) --Sous compétenses
 );
 

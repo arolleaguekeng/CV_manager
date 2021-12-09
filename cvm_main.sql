@@ -68,8 +68,9 @@ ALTER SESSION SET NLS_TERRITORY=Cameroon;
 --
 -- create tables, sequences and constraint
 --
-
+set linesize 1000
 @cvm_cre
+@cvm_code
 @diovani/users_popul
 
 
