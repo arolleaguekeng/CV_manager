@@ -85,7 +85,7 @@ Table created.
 Table created.
 
 
-Table altered.
+Table created.
 
 
 Table altered.
@@ -99,11 +99,11 @@ Table altered.
 
 Table altered.
 
-ALTER TABLE info_add
-*
-ERROR at line 1:
-ORA-00942: table or view does not exist 
 
+Table altered.
+
+
+Table altered.
 
 
 Table altered.
