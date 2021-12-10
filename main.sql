@@ -11,4 +11,4 @@ set linesize 1000
 --@features/main
 SPOOL OFF
 
-SELECT table_name FROM user_tables;
+SELECT table_name FROM user_tables; 
