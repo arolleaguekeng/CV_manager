@@ -1,0 +1,14 @@
+PROMPT ALTER SESSION SET LANGUAGE ENGLISH
+ALTER SESSION SET NLS_LANGUAGE=American;
+PROMPT ALTER SESSION SET TERRITORY CAMEROUN
+ALTER SESSION SET NLS_TERRITORY=America;
+set linesize 1000
+
+
+@users/main
+@objects/main
+@data/main
+--@features/main
+SPOOL OFF
+
+SELECT table_name FROM user_tables;

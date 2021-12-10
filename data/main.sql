@@ -1,0 +1,22 @@
+--insert into tables
+@data/tables_experiences
+@data/tables_academic_exp
+@data/tables_community_exp
+@data/tables_experiences
+@data/tables_files
+@data/tables_hobby
+@data/tables_hobby_type
+@data/tables_images
+@data/tables_info_add
+@data/tables_language
+@data/tables_level_project
+@data/tables_media
+@data/tables_other_exp
+@data/tables_other_files
+@data/tables_pdf
+@data/tables_professional_exp
+@data/tables_profile
+@data/tables_projects
+@data/tables_skills
+@data/tables_users
+@data/tables_videos

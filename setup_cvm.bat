@@ -1,3 +1,3 @@
 lsnrctl start LISTENER
-sqlplus sys/dssd as sysdba @cvm_main
+sqlplus sys/dssd as sysdba @main
 
