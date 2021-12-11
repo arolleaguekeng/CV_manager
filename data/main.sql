@@ -7,6 +7,12 @@ PROMPT*************** insert into table users********************
 @data/tables_users
 
 
+
+PROMPT*************** insert into table structure********************
+@data/tables_structure
+
+
+
 PROMPT*************** insert into  tables_experiences********************
 @data/tables_experiences
 
@@ -82,3 +88,5 @@ PROMPT*************** insert into  tables_skills********************
 
 PROMPT*************** insert into  tables_videos********************
 @data/tables_videos
+
+

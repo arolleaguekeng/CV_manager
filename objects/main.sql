@@ -2,7 +2,12 @@ ALTER SESSION SET NLS_LANGUAGE=English;
 ALTER SESSION SET NLS_TERRITORY=America;
 ALTER session set NLS_DATE_FORMAT='DD/MM/YYYY';
 --@sequences/main
-PROMPT******************** create table experience****************************************************************
+
+
+PROMPT******************** create table structures************************************
+@objects/tables/tables_structure
+
+PROMPT******************** create table experience************************************
 @objects/tables/tables_experiences
 
 

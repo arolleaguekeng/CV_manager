@@ -1,10 +1,11 @@
 PROMPT******************** SET NLS LANGUAGE*********************
-
-
-
 ALTER SESSION SET NLS_LANGUAGE=English;
+
+
 PROMPT******************** SET NLS TERRITORY*********************
 ALTER SESSION SET NLS_TERRITORY=America;
+
+PROMPT******************** SET line size*********************
 set linesize 1000
 
 PROMPT******************** SET NLS DATE FORMAT*********************
