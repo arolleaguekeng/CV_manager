@@ -1,6 +1,8 @@
+
+
 SET ECHO OFF
 SET VERIFY OFF
-PROMPT START ALTER SESSION
+PROMPT******************** ALTER SESSION AND SET XEPDB1*************************
 ALTER SESSION set container=xepdb1;
 PROMPT 
 PROMPT specify password for cvm as parameter 1:
@@ -21,40 +23,44 @@ PROMPT
 PROMPT specify connect string as parameter 6:
 DEFINE connect_string     = //localhost:1521/xepdb1
 PROMPT
-
+PROMPT********************write in log path*************************
 DEFINE spool_file = &log_path.cvm_main.log
 SPOOL &spool_file
 
+
+PROMPT********************refresh user*************************
 DROP USER cvm CASCADE;
 -------------------------------------------------------------------------------
-PROMPT CREATE USER
+PROMPT********************create user*************************
 CREATE USER cvm IDENTIFIED BY &pass;
 -------------------------------------------------------------------------------
 
-
+PROMPT********************set defauld tablespace*************************
 PROMPT ALTER USER SET DEFAUT TABLE
 ALTER USER cvm DEFAULT TABLESPACE &tbs
               QUOTA UNLIMITED ON &tbs;
 -------------------------------------------------------------------------------
+PROMPT********************give temporary tablesspace *************************
 PROMPT ALTER USER GIVE A TEMPORARY TABLESSPACE
 ALTER USER cvm TEMPORARY TABLESPACE &ttbs;
+PROMPT********************grant user and give access*************************
 PROMPT GRAND ACESS CREATE VIEW, ALTER SESSION, CREATE SEQUENCE TO cvm
 GRANT CREATE SESSION, CREATE VIEW, ALTER SESSION, CREATE SEQUENCE TO cvm;
 ------------------------------------------------------------------------------------
 
-
+PROMPT********************grant user and give access*************************
 PROMPT GRANT CREATE SESSION, CREATE VIEW, ALTER SESSION, CREATE SEQUENCE TO cvm
 GRANT CREATE SYNONYM, CREATE DATABASE LINK, RESOURCE , UNLIMITED TABLESPACE TO cvm;
 ------------------------------------------------------------------------------------
 
-
-PROMPT CONNECTION TO sysdba
+PROMPT********************connection to SYDBA*************************
 CONNECT sys/&pass_sys@&connect_string AS SYSDBA;
-PROMPT GRANT EXECUTE 
+PROMPT********************grant execute on user*************************
 GRANT execute ON sys.dbms_stats TO cvm;
 
 REM =======================================================
 REM create cvm schema objects
 REM =======================================================
+PROMPT********************create cvm schema objects*************************
 CONNECT cvm/&pass@&connect_string
 

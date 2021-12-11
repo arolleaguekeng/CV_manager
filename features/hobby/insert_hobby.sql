@@ -1,0 +1,1 @@
+INSERT INTO hobby(hobby_id,hobby_name,user_id,media_id) values(&hobby_id,'&hobby_name',&user_id,&media_id);

@@ -3,6 +3,7 @@
 --
 
 CREATE TABLE pdf(
-    pdf_id VARCHAR(255)   PRIMARY KEY,
+    pdf_name VARCHAR(30)  PRIMARY KEY NOT NULL,
+    size_pdf VARCHAR(30),
     file_id  INT  NOT NULL
 );

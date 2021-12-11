@@ -4,9 +4,8 @@
 
 CREATE TABLE languages
 (
-    language_id INT PRIMARY KEY NOT NULL,
-    language_level VARCHAR(30) NOT NULL,
-    language_name VARCHAR(30) NOT NULL,
-    user_id INT NOT NULL,
-	CONSTRAINT fk_language_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+    language_id INT PRIMARY KEY NOT NULL, --langue
+    language_level varchar(30),
+    language_name varchar(30),
+    user_id int NOT NULL
 );
