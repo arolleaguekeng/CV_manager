@@ -1,0 +1,1 @@
+UPDATE TABLE videos SET video_name = &nouveau_nom WHERE video_name = &nom_video;

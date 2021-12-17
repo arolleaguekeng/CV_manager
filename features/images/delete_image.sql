@@ -1,0 +1,1 @@
+DELETE * FROM images WHERE image_name = &nom_images;

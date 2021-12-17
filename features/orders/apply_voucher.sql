@@ -1,0 +1,62 @@
+Prompt *****ADD EDITT ORDER.....
+
+Prompt
+Prompt Order number:
+DEFINE order = &1 
+
+Prompt
+Prompt Voucher number:
+DEFINE voucher = &2
+
+Prompt
+Prompt Client:
+DEFINE client = &1 
+
+Prompt *****ADD APPLYING VOUCHER.....
+update orders set voucher_id = &voucher where order_number = &order;
+
+WITH cte1
+AS(
+    SELECT pi.quantity, pi.item_id, oi.article_id
+    FROM order_item oi    
+    LEFT OUTER JOIN orders o ON TO_CHAR(o.order_date, 'DD-Month-YYYY') = TO_CHAR(SYSDATE, 'DD-Month-YYYY') AND o.order_number = oi.order_number
+    RIGHT OUTER JOIN package_item pi ON pi.item_id = oi.item_id
+    WHERE oi.order_number = &order),
+cte2
+AS(
+    SELECT  DISTINCT(oi.article_id),
+        CASE WHEN EXISTS(SELECT price FROM list_price WHERE client_id = &client AND article_id= oi.article_id )
+        THEN (SELECT price FROM list_price WHERE client_id = &client AND article_id= oi.article_id )
+        ELSE (SELECT price FROM articles WHERE article_id = oi.article_id) END price
+    FROM order_item oi
+),
+cte3
+AS(
+    SELECT oi.article_id, oi.item_id,
+    CASE WHEN s.type = 'percentage' THEN s.percentage * c2.price
+    ELSE s.amount  END * 
+    (SELECT c1.quantity FROM cte1 c1 WHERE c1.item_id = oi.item_id) service_price
+    FROM order_item oi
+    LEFT OUTER JOIN services s ON oi.service_id = s.service_id
+    LEFT OUTER JOIN cte2 c2 ON c2.article_id = oi.article_id
+    WHERE oi.order_number = &order
+),
+cte4
+AS(
+    SELECT SUM((c1.quantity * (SELECT 
+                            c2.price FROM cte2 c2 WHERE 
+                            c2.article_id = c1.article_id)))
+        +SUM(c3.service_price) TOTAL 
+    FROM cte1 c1
+    LEFT OUTER JOIN cte3 c3 ON c3.item_id = c1.item_id
+)
+SELECT (SELECT c4.total FROM  cte4 c4 ) ||' (-' ||
+    CASE WHEN v.type = 'percentage' THEN v.percentage * (SELECT c4.total FROM  cte4 c4 )
+    ELSE v.amount  END || ' )' "BILLING AMOUNT"
+    FROM orders o
+    LEFT OUTER JOIN vouchers v ON v.voucher_id = o.voucher_id 
+    WHERE o.order_number = &order;
+
+UNDEFINE order
+UNDEFINE client
+UNDEFINE voucher

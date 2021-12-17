@@ -1,0 +1,1 @@
+UPDATE TABLE images SET image_name = &nouveau_nom WHERE image_name = &nouveau_nom;

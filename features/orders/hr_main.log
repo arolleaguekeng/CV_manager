@@ -1,0 +1,790 @@
+DROP USER ob CASCADE
+*
+ERREUR à la ligne 1 :
+ORA-01031: privilèges insuffisants
+
+
+CREATE USER ob IDENTIFIED BY ob
+*
+ERREUR à la ligne 1 :
+ORA-01031: privilèges insuffisants
+
+
+ALTER USER ob DEFAULT TABLESPACE users
+*
+ERREUR à la ligne 1 :
+ORA-01031: privilèges insuffisants
+
+
+ALTER USER ob TEMPORARY TABLESPACE temp
+*
+ERREUR à la ligne 1 :
+ORA-01031: privilèges insuffisants
+
+
+GRANT CREATE SESSION, CREATE VIEW, ALTER SESSION, CREATE SEQUENCE TO ob
+*
+ERREUR à la ligne 1 :
+ORA-01031: privilèges insuffisants
+
+
+GRANT CREATE SYNONYM, CREATE DATABASE LINK, RESOURCE , UNLIMITED TABLESPACE TO ob
+*
+ERREUR à la ligne 1 :
+ORA-01031: privilèges insuffisants
+
+
+Connecté.
+
+Autorisation de privilèges (GRANT) acceptée.
+
+Connecté.
+
+Session altered.
+
+
+Session altered.
+
+******  Creating REGIONS table ....
+
+Table created.
+
+******  Creating CITY table ....
+
+Table created.
+
+******  Creating LOCATIONS table ....
+
+Table created.
+
+******  Creating ADDRESS table ....
+
+Table created.
+
+****** Creating STORE table ....
+
+Table created.
+
+****** Creating USERS table ....
+
+Table created.
+
+******  Creating EMPLOYEES table ....
+
+Table created.
+
+****** Creating CLIENTS table ....
+
+Table created.
+
+****** Creating WAREHOUSES table ....
+
+Table created.
+
+****** Creating WAREHOUSES_ARTICLE table ....
+
+Table created.
+
+****** Creating Services table ....
+
+Table created.
+
+****** Creating ARTICLES table ....
+
+Table created.
+
+****** Creating ARTICLE_SERVICE table ....
+
+Table created.
+
+****** Creating SHIPPING_CLASS table ....
+
+Table created.
+
+****** Creating ARTICLE_GROUP table ....
+
+Table created.
+
+****** Creating LISTE DE PRIX table ....
+
+Table created.
+
+****** Creating INSTALLATIONS table ....
+
+Table created.
+
+****** Creating WARRANTIES table ....
+
+Table created.
+
+****** Creating VOUCHERS table....
+
+Table created.
+
+****** Creating ORDERS table....
+
+Table created.
+
+
+Index created.
+
+****** Creating ORDER_ITEM table....
+
+Table created.
+
+****** creating group_voucher table....
+
+Table created.
+
+******  Creating Packages table ....
+
+Table created.
+
+******  Creating Package_item table ....
+
+Table created.
+
+
+Commit complete.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+ON list_price (price_id)
+               *
+ERROR at line 2:
+ORA-00904: "PRICE_ID": invalid identifier
+
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Index created.
+
+
+Table altered.
+
+
+Commit complete.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Commit complete.
+
+******  Populating SHIPPING_CLASS table ....
+
+5 rows created.
+
+******  Populating ARTICLE_GROUP table ....
+
+10 rows created.
+
+******  Populating REGION table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CITY table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating LOCATIONS table ....
+******  STORES LOCATIONS table ....
+
+2 rows created.
+
+******  WAREHOUSES LOCATIONS table ...
+
+2 rows created.
+
+******  Populating WAREHOUSES table ....
+
+2 rows created.
+
+******  Populating ADDRESS table ....
+******  STORES ADDRESS ....
+
+2 rows created.
+
+******  Populating STORES table ....
+
+2 rows created.
+
+******  Populating EMPLOYEES table ....
+
+3 rows created.
+
+******  Populating VOUCHERS table ....
+
+3 rows created.
+
+******  Populating GROUP_VOUCHER table ....
+
+3 rows created.
+
+******  Populating SERVICES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CLIENTS table ....
+
+1 row created.
+
+
+4 rows created.
+
+******  Populating ARTICLES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CLIENTS table ....
+
+1 row created.
+
+
+4 rows created.
+
+******  Populating ARTICLES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CLIENTS table ....
+
+1 row created.
+
+
+4 rows created.
+
+******  Populating ARTICLES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CLIENTS table ....
+
+1 row created.
+
+
+4 rows created.
+
+******  Populating ARTICLES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CLIENTS table ....
+
+1 row created.
+
+
+4 rows created.
+
+******  Populating ARTICLES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CLIENTS table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating ARTICLES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating CLIENTS table ....
+
+1 row created.
+
+
+4 rows created.
+
+******  Populating ARTICLES table ....
+
+1 row created.
+
+INSERT INTO article_service(article_id_seq.currval, service_id) VALUES(5, 'iphone_WS')
+                                           *
+ERROR at line 1:
+ORA-02287: sequence number not allowed here
+
+
+
+1 row created.
+
+
+1 row created.
+
+INSERT INTO article_service(article_id_seq.currval, service_id) VALUES(5, 'iphone_WS')
+                                           *
+ERROR at line 1:
+ORA-02287: sequence number not allowed here
+
+
+
+1 row created.
+
+
+1 row created.
+
+INSERT INTO article_service(article_id_seq.currval, service_id) VALUES(5, 'iphone_WS')
+                                           *
+ERROR at line 1:
+ORA-02287: sequence number not allowed here
+
+
+
+1 row created.
+
+
+Commit complete.
+

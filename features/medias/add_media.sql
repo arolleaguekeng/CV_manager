@@ -1,0 +1,1 @@
+INSERT INTO medias(media_id, project_id) VALUES (&numero_media, &numero_projet);

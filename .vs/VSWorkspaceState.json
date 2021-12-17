@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\features"
   ],
-  "SelectedNode": "\\cvm_main.sql",
+  "SelectedNode": "\\features\\show_cv.sql",
   "PreviewInSolutionExplorer": false
 }

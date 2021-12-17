@@ -1,0 +1,1 @@
+DELETE * FROM videos WHERE video_name = &nom_video;

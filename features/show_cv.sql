@@ -122,11 +122,13 @@ SET LINESIZE 1000
 SET NEWPAGE NONE
 SET TRIMS OFF
 SET NUHWIDTN 50
+SILENT
 SPOOL CV_EXEMPLE.html
 
 
 
-PROMPT ******************************************************************************************************CV INFORMATION*****************************
+
+SELECT '<h1>CV INFORMATION</h1>' FROM users;
 
 
 PROMPT ******************************************************************************************************PROFILE INFORMATIONS******************************
@@ -186,7 +188,6 @@ WHERE ex.user_id = (select user_id FROM users WHERE user_name = '&user_name' AND
 
 
 PROMPT *************************************************ACADEMICAL EXPERIENCE INFORMATION****************************************
-
 SELECT ex.instituled ,begin_date ,end_date
 FROM academical_exp pe
 JOIN experiences ex ON (pe.experience_id = ex.experience_id)
