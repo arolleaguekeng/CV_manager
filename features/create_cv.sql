@@ -35,24 +35,12 @@ PROMPT*************** insert into  tables_media********************
 
 
 PROMPT *************************************************ACADEMICAL EXPERIENCE INFORMATION****************************************
-SELECT * FROM hobby_type
+SELECT * FROM hobby_type;
 
 PROMPT*************** insert into  tables_hobbys********************
 @features/hobbys/add_hobby
 
 
-
-
-PROMPT *************************************************ACADEMICAL EXPERIENCE INFORMATION****************************************
-SELECT *
-FROM academical_exp pe
-JOIN experiences ex ON (pe.experience_id = ex.experience_id)
-WHERE ex.user_id = (select user_id FROM users WHERE user_name = '&user_name' AND user_password = '&user_password');
-
-
-
-PROMPT*************** insert into  tables_academic_exp********************
-@features/add_academic_exp
 
 
 PROMPT ******************************************************************************************************MEDIA INFORMATION*******************
@@ -64,18 +52,12 @@ JOIN experiences ex ON (ex.experience_id = pj.experience_id)
 WHERE
 ex.user_id = (select user_id FROM users WHERE user_name = '&user_name' AND user_password = '&user_password');
 
-PROMPT*************** insert into  tables_images********************
-@features/images/add_image
-
 
 PROMPT*************** insert into  tables_language********************
-@features/languages/add_language
+@features/languages/add_languages
 
 
 
 PROMPT*************** insert into  tables_skills********************
 @features/skills/add_skills
-
-PROMPT*************** insert into  tables_videos********************
-@features/videos/add_video
-@show_cv
+@features/show_cv
